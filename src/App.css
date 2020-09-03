@@ -1,0 +1,170 @@
+.App {
+  text-align: center;
+}
+
+.Home {
+    text-align: left;
+}
+
+.Home h1, .Home h2 {
+    text-align: center;
+}
+
+.Home button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.string-checkboxes {
+  display: flex;
+  justify-content: center;
+}
+
+.accidental-checkboxes {
+  display: flex;
+  justify-content: center;
+}
+
+.Stave {
+  margin: -2em;
+}
+
+.NewNoteButton {
+  margin: 1em;
+}
+
+.NewNoteButton.active {
+  background-color: lime;
+}
+
+.ResetButton {
+  margin: 1em;
+  /* color: white; */
+  /* background-color: deeppink; */
+}
+
+.total-score {
+  font-size: 250%;
+}
+
+.Leaderboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Leaderboard td {
+  text-align: left;
+  padding-top: 0.5em;
+  padding-right: 1em;
+}
+
+.ShowLeaderboard {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 1em;
+}
+
+.ShowLeaderboard:hover,
+.ShowLeaderboard:focus {
+  text-decoration: none;
+}
+
+/* .SettingsMenu { */
+/* } */
+
+.SettingsMenu button {
+    margin-top: 1em;
+}
+
+.RoundOverModal button {
+  margin: 0.5em;
+}
+
+.Navbar {
+  background: #eee;
+}
+
+.Navbar ul {
+  display: flex;
+  width: 25%;
+  /* width: 50%; */
+  margin: auto;
+  padding: 0;
+}
+
+.Navbar li {
+  padding: 0;
+  list-style: none;
+  margin: auto;
+}
+
+.RegistrationForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.RegistrationForm input {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.RegistrationForm .submit-button {
+    margin-top: 1em;
+}
+
+.LoginForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.LoginForm input {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.LoginForm .submit-button {
+    margin-top: 1em;
+}
+
+.LoginForm .link {
+    display: block;
+    margin-top: 2em;
+}
+
+.Username {
+    position: fixed;
+    bottom: 1em;
+    width: 100%;
+}
+
+.FlashMessage {
+    font-size-adjust: 1.2;
+    color: deeppink;
+}
+
+.ScoreDisplay.active {
+    background-color: yellow;
+}
+
+.ScoreSummary table {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ScoreSummary table td {
+  padding-left: 2em;
+}
+
+/* .StringSelect { */
+/*   border: 1px solid black; */
+/* } */
+
+/* .AccidentalSelect { */
+/*   border: 1px solid black; */
+/* } */
