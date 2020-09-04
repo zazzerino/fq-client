@@ -7,12 +7,10 @@ export function TimeSelect(_props: any) {
   const dispatch = useDispatch();
   const roundLength = useSelector((state: AppState) => state.quiz.roundLength);
 
-
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
     const val = parseInt(event.target.value);
     dispatch(setRoundLength(val));
   }
-
 
   return (
     <div className="TimeSelect">

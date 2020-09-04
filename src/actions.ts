@@ -1,7 +1,8 @@
 import { randomNoteOnStrings, isCorrectGuess } from './theory';
 import { FretboardCoord, NoteOpts, GuessStatus, Score } from './types';
 import * as http from './http';
-import { correctSound, incorrectSound } from './audio';
+import { playNotes } from './audio';
+import * as theory from './theory';
 
 export enum ActionType {
   FRETBOARD_CLICK = 'FRETBOARD_CLICK',
@@ -61,9 +62,9 @@ export function fretboardClick({ noteToGuess, coord }): FretboardClickAction {
     'CORRECT' : 'INCORRECT';
 
   if (guessStatus === 'CORRECT') {
-    correctSound.play();
+    playNotes([noteToGuess]);
   } else {
-    incorrectSound.play();
+    playNotes([theory.findNoteAt(coord), noteToGuess]);
   }
 
   return {
@@ -230,7 +231,7 @@ export interface SetRoundLengthAction {
   seconds: number
 }
 
-export function setRoundLength(seconds: number) {
+export function setRoundLength(seconds: number): SetRoundLengthAction {
   return {
     type: ActionType.SET_ROUND_LENGTH,
     seconds
