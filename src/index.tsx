@@ -17,6 +17,9 @@ const store = createStore(rootReducer, composeEnhancers(
   applyMiddleware(thunkMiddleware)
 ));
 
+// @ts-ignore
+window.store = store;
+
 // console.log(store.getState());
 // store.subscribe(() => console.log(store.getState()));
 

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { AppState } from '../types';
-import { newNoteToGuess, reset } from '../actions';
+import { newNoteToGuess } from '../actions';
 import { StringSelect } from './StringSelect';
 import { AccidentalSelect } from './AccidentalCheckbox';
 import { Username } from './Username';

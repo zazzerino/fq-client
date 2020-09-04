@@ -71,9 +71,7 @@ export function quiz(state = initialState.quiz, action: Action): Quiz {
 
     case ActionType.TICK:
       const secondsLeft = state.secondsLeft - 1;
-      return secondsLeft < 0 ?
-        { ...state }
-        : { ...state, secondsLeft };
+      return secondsLeft < 0 ? { ...state } : { ...state, secondsLeft };
 
     case ActionType.SET_ROUND_LENGTH:
       return {

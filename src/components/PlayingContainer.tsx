@@ -8,11 +8,13 @@ import { AppState } from '../types';
 import { newNoteToGuess, tick } from '../actions';
 import { Redirect } from 'react-router-dom';
 import { useInterval } from '../util';
+import { GuessStatus } from './GuessStatus';
 
 export function PlayingContainer(props: any) {
   const dispatch = useDispatch();
   const noteToGuess = useSelector((state: AppState) => state.quiz.noteToGuess);
   const noteOpts = useSelector((state: AppState) => state.noteOpts);
+  const guessStatus = useSelector((state: AppState) => state.quiz.guessStatus);
   const isRoundOver = useSelector((state: AppState) => {
       return state.quiz.secondsLeft <= 0;
   });
@@ -24,12 +26,15 @@ export function PlayingContainer(props: any) {
   }, [dispatch, noteToGuess, noteOpts]);
 
   useInterval(() => {
-    dispatch(tick());
+    if (guessStatus == null) {
+      dispatch(tick());
+    }
   }, 1000);
 
   return (
     <div className="PlayingContainer">
       { isRoundOver && <Redirect to="/roundover" /> }
+      <GuessStatus />
       <SecondsLeft />
       <Stave />
       <Fretboard />
