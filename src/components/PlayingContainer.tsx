@@ -34,11 +34,11 @@ export function PlayingContainer(props: any) {
   return (
     <div className="PlayingContainer">
       { isRoundOver && <Redirect to="/roundover" /> }
-      <GuessStatus />
       <SecondsLeft />
       <Stave />
       <Fretboard />
       <NewNoteButton />
+      <GuessStatus />
     </div>
   );
 }
